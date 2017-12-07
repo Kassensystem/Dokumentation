@@ -13,7 +13,8 @@ Die folgenden Schritte durchführen, um das Datenbank-System zu installieren und 
 3 Importieren der Datenbank-Struktur
 
 	- MySQL-Workbench öffnen: Management -> Data Import/Restore
-	- "Import from Dump Project Folder": Die Datei "Datenbank Import/Dump20171128.sql" auswählen.
+	- "Import from Dump Project Folder": 
+	  Die Datei "Datenbank Import/Dump20171128.sql" auswählen.
 	- Im Drop-Down-Menü "Dump Structure Only" auswählen.
 	- Imporieren mit "Start Import".
 
@@ -26,23 +27,42 @@ Die folgenden Schritte durchführen, um das Datenbank-System zu installieren und 
 		- Im Tab "Administrative Roles": "DBManager" auswählen.
 	- Anwenden mit "Apply".
 
-5 Download des aktuellsten DatabaseSystems
+5 Installieren des Druckertreibers
+
+	- APD_507_T88V.exe im Ordner "Druckertreiber APD_507_T88V_EWM" starten.
+	- Installationsanweisungen folgen.
+
+6 Download des aktuellsten DatabaseSystems
 
 	- https://github.com/Kassensystem/DatabaseSystem/releases/latest
-	- Zum Download auf "Source Code (zip)" klicken
+	- Zum Download auf "Source Code (zip)" klicken.
+	- Entpacken der Dateien.
 
-6 Download der aktuellsten ManagerApplication
+7 Download der aktuellsten ManagerApplication
 
 	- https://github.com/Kassensystem/ManagerApplication/releases/latest
-	- Zum Download auf "Source Code (zip)" klicken
+	- Zum Download auf "Source Code (zip)" klicken.
+	- Entpacken der Dateien.
 
-7 Anpassen der Firewall
+8 Anpassen der Firewall
 
-	- Um dem Server eine Kommunikation im lokalen Netzwerk zu ermöglichen die folgenden Änderungen durchführen.
+	Um dem Server eine Kommunikation im lokalen Netzwerk zu ermöglichen 
+	die folgenden Änderungen durchführen:
 	- Windows-Firewall öffnen
-	- (..., ausgehende Regel oder komplette Freigabe?)
+	- (??ausgehende Regel oder komplette Freigabe??)
 
-8 Starten des Servers
+9 Starten des Servers
 
-	- Zum Starten des Servers die Datei "start.bat" starten
-	- Das Kommandozeilenfenster geöffnet lassen. Zum Beenden des Servers das Fenster schließen.
+	In entpackten Dateien des DatbaseSystems:
+	- Datei "start.bat" starten
+	- Das Kommandozeilenfenster geöffnet lassen. 
+	  Zum Beenden des Servers das Fenster schließen.
+
+10 Starten der ManagerApplication
+
+	In entpackten Dateien der ManagerApplication:
+	- Datei "start.bat" starten
+	oder
+	- kassensystem_manager.exe im Pfad
+	"\out\artifacts\kassensystem_managerApplication\bundles\kassensystem_managerApplication"
+	mit Rechtsklick -> Senden an -> Desktop eine Verknüpfung erstellen
