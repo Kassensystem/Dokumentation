@@ -1,0 +1,48 @@
+Die folgenden Schritte durchführen, um das Datenbank-System zu installieren und zu betreiben:
+
+1 Wenn nicht vorhanden, JRE (Java Runtime Environment) installieren.
+
+2 Installation des MySQL Community Servers
+
+	- Installer mysql-installer-community-5.7.20.0.msi starten
+	- Folgende Komponenten Installieren:
+		- MySQL-Server
+		- MySQL-Workbench
+		- MySQL-Notifier
+
+3 Importieren der Datenbank-Struktur
+
+	- MySQL-Workbench öffnen: Management -> Data Import/Restore
+	- "Import from Dump Project Folder": Die Datei "Datenbank Import/Dump20171128.sql" auswählen.
+	- Im Drop-Down-Menü "Dump Structure Only" auswählen.
+	- Imporieren mit "Start Import".
+
+4 Anlegen eines neuen Users für den Database-Service
+
+	- MySQL-Workbench: Management -> Users and Privileges
+	- Den foglenden User anlegen:
+		- Login Name: 	DatabaseService
+		- Password: 	password
+		- Im Tab "Administrative Roles": "DBManager" auswählen.
+	- Anwenden mit "Apply".
+
+5 Download des aktuellsten DatabaseSystems
+
+	- https://github.com/Kassensystem/DatabaseSystem/releases/latest
+	- Zum Download auf "Source Code (zip)" klicken
+
+6 Download der aktuellsten ManagerApplication
+
+	- https://github.com/Kassensystem/ManagerApplication/releases/latest
+	- Zum Download auf "Source Code (zip)" klicken
+
+7 Anpassen der Firewall
+
+	- Um dem Server eine Kommunikation im lokalen Netzwerk zu ermöglichen die folgenden Änderungen durchführen.
+	- Windows-Firewall öffnen
+	- (..., ausgehende Regel oder komplette Freigabe?)
+
+8 Starten des Servers
+
+	- Zum Starten des Servers die Datei "start.bat" starten
+	- Das Kommandozeilenfenster geöffnet lassen. Zum Beenden des Servers das Fenster schließen.
