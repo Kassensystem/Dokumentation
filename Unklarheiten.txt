@@ -1,0 +1,4 @@
+Fragen an Herr Moosheimer:
+- Workflows: Warenein- und ausgänge
+	Was ist gemeint mit "Wareneingang bearbeiten neu umsetzen!"
+	Soll eine Funktion zum Bearbeiten von Wareneingängen implementiert werden?
